@@ -1,0 +1,47 @@
+<Third>:
+
+    GridLayout:
+        cols: 1
+        spacing: "30dp"
+        size_hint: 0.5,0.4
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        GridLayout:
+            cols: 1
+            Label:
+                text: "Welcome to african grill"  
+                bold: True
+                color: 1,1,0,1
+                font_size: 30
+          
+        GridLayout:
+            cols: 1
+            spacing: "8dp"
+            size_hint: 0.3, 2.5
+            
+            Label:
+                id: info
+                text: ''
+                markup: True 
+
+            TextInput:
+                id: Username_field
+                hint_text: "Username"
+                multiline: False
+                focus: True
+                on_text_validate: pwd_field.focus = True
+            TextInput:
+                id: pwd_field
+                hint_text: "Password"
+                multiline: False 
+                password: True
+                on_text_validate: root.validate_user()
+        BoxLayout:
+            Button:
+                text: "SignIn"
+                bold: "True"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}                           
+                size_hint: 0.5, 0.8
+                on_release: root.validate_user()
+
+    
+               

@@ -1,0 +1,530 @@
+#: import NoTransition kivy.uix.screenmanager.NoTransition
+<WindowManager>:
+    First:
+    Sign:
+    Third:
+    Second:
+    Purchase:
+
+                     
+<First>:
+    name: "First"
+    canvas: 
+        Ellipse:
+            size: 100,100
+            pos: 5, 495
+    BoxLayout:
+        canvas:
+            Ellipse:
+                pos: 200, 300
+                size: 100, 100
+                source: "food2.png"  
+    BoxLayout:               
+        canvas:
+            Ellipse:
+                pos: 300, 370
+                size: 100, 100
+                source: "food3.png"  
+    BoxLayout:                       
+        canvas:
+            Ellipse:
+                pos: 400, 300
+                size: 100, 100
+                source: "food1.png" 
+
+    GridLayout:
+        cols: 1
+        spacing: "10dp"
+        pos_hint: {"center_x": 0.6, "center_y": 0.9}
+        size_hint: 0.7, 0.1
+        canvas:
+            Color:
+                rgb: 1, 1, 0  # Set the background color (light gray)
+            Rectangle:
+                pos: 209, 500
+                size: 660, 80
+        Label:
+            text: "Welcome to African Grill"
+            bold: True
+            font_size: 30
+            color: 0, 0, 0
+            
+        Label:    
+            text: "Met Camerounais - Grillades -Cocktail -Lounge " 
+            bold: True
+            font_size: 25
+            color: 0, 0, 0
+
+        Label    
+            text: "Mangez comme chez vous"
+            bold: True
+            font_size: 18
+            color: 0, 0, 0
+
+
+    GridLayout: 
+        cols: 1
+        spacing: "2dp"
+        size_hint: 0.2, 0.2
+        pos_hint: {"center_x": 0.5, "center_y": 0.35}
+        Label:
+            text: "Bienvenue chez nous!!. Vous etes dans le bon endroit. Vous satisfaire c'est notre Priorite.Nous"
+            font_size: 18
+        Label:
+            text: " sommes l'un des meilleur restaurant au Cameroun qui font dans la specialite "
+            font_size: 18
+        Label:
+            text: "des mets cameroonais. Nesite pas a explorer nos menu car vous serez vivement ravi"  
+            font_size: 18    
+
+    GridLayout:
+        cols: 1
+        spacing: "2dp"
+        pos_hint: {"center_x": 0.8, "center_y": 0.1} 
+        size_hint: 0.3, 0.1
+        Button:
+            text: "SignIn"
+            size_hint: 0.2, 0.1
+            color: 1, 1, 0
+            bold: True
+            font_size: 17
+            on_press:
+                root.manager.transition = NoTransition()
+                root.manager.current = "Sign"
+        Button: 
+            text: "LogIn"
+            size_hint: 0.2, 0.1   
+            color: 1, 1, 0
+            bold: True
+            font_size: 17
+            on_press:
+                root.manager.transition = NoTransition()
+                root.manager.current = "Third"
+            
+    GridLayout:
+        cols: 1
+        spacing: "2dp"
+        pos_hint: {"center_x": 0.15, "center_y": 0.1}
+        size_hint: 0.2, 0.13
+        Label:
+            text: "Founded by Mme Emmy"
+            color: 1, 1, 0
+        Label:
+            text: "Location: sis fue Nlongkak" 
+            color: 1, 1, 0
+        Label:
+            text: "Contact: 691 07 08 22" 
+            color: 1, 1, 0   
+
+<Sign>:
+    name: "Sign"
+    GridLayout:
+        cols: 1
+        spacing: "9dp"
+        size_hint: 0.5,0.4
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        canvas:
+            Color:
+                rgb: 1, 1, 1 
+            Rectangle:
+                pos: 0, 0
+                size: 800, 600
+
+        GridLayout: 
+            cols: 1
+            Label: 
+                text: "Welcome to African Grill"
+                bold: True
+                font_size: 30
+                color: 1,1,0,1
+        GridLayout:
+            cols: 1
+            Label:
+                text: "Sign in"  
+                bold: True
+                font_size: 25
+                color: 0,0,0       
+        GridLayout:
+            cols: 2
+            spacing: "8dp"
+            size_hint: 0.3, 2.5
+            Label: 
+                text: "User name:"
+                bold: True
+                color: 0,0,0
+                font_size: 15
+            TextInput:
+                multiline: False
+            Label:
+                text: "PassWord:"
+                color: 0,0,0
+                bold: True
+                font_size: 15
+            TextInput:
+                multiline: False
+            Label:
+                text: "Enter your PassWord again"
+                bold: True
+                color: 0,0,0
+                font_size: 15
+            TextInput:
+                multiline: False 
+
+        GridLayout:
+            cols: 1
+            size_hint: 0.5,0.6
+            Button:
+                text: "Save"
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Third"
+    GridLayout:
+        cols: 1
+        pos_hint: {"center_x": 0.03, "center_y": 0.97}
+        size_hint: 0.05, 0.05                
+        Button:
+            text: "back"
+            on_press:
+                root.manager.transition = NoTransition()
+                root.manager.current = "First"
+<Third>:
+    name: "Third"
+    GridLayout:
+        cols: 1
+        spacing: "30dp"
+        size_hint: 0.5,0.4
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        canvas:
+            Color:
+                rgb: 1, 1, 1  # Set the background color (light gray)
+            Rectangle:
+                pos: 0, 0
+                size: 800, 600
+        GridLayout:
+            cols: 1
+            Label:
+                text: "Welcome to african grill"  
+                bold: True
+                color: 1,1,0,1
+                font_size: 30
+          
+        GridLayout:
+            cols: 1
+            spacing: "8dp"
+            size_hint: 0.3, 2.5
+            
+            Label:
+                id: info
+                text: ''
+                markup: True 
+
+            TextInput:
+                id: Username_field
+                hint_text: "Username"
+                multiline: False
+                focus: True
+                on_text_validate: pwd_field.focus = True
+            TextInput:
+                id: pwd_field
+                hint_text: "Password"
+                multiline: False 
+                password: True
+                on_text_validate: root.validate_user()
+        BoxLayout:
+            Button:
+                text: "LogInIn"
+                bold: "True"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}                           
+                size_hint: 0.5, 0.8
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Second"
+    GridLayout:
+        cols: 1
+        pos_hint: {"center_x": 0.03, "center_y": 0.97}
+        size_hint: 0.05, 0.05                
+        Button:
+            text: "back"
+            on_press:
+                root.manager.transition = NoTransition()
+                root.manager.current = "First"
+
+<Purchase>:
+    name: "Purchase"
+    GridLayout:
+        cols: 1
+        spacing: "8dp"
+        size_hint: 0.7,0.9
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        canvas:
+            Color:
+                rgb: 1, 1, 0  
+            Rectangle:
+                pos: 10, 0
+                size: 900, 600    
+
+        GridLayout:
+            spacing: "9dp"
+            cols: 1
+            Image:
+                source: "food3.png"
+
+        GridLayout:
+            cols: 2
+            spacing: "8dp"
+            Label:
+                color: 0,0,0
+                text: "Name:"
+                bold: True
+                font_size: "15dp"
+            TextInput:
+                multiline: False
+
+            Label:
+                color: 0,0,0
+                text: "Contact:"
+                bold: True
+                font_size: "15dp"
+            TextInput:
+                multiline: False
+
+            Label:
+                color: 0,0,0
+                text: "Number of plates:"
+                bold: True
+                font_size: "15dp"
+            TextInput:
+                multiline: False   
+
+            Label:
+                color: 0,0,0
+                text: "Enter the delivery date:"
+                bold: True
+                font_size: "15dp"
+            TextInput:
+                multiline: False 
+
+        GridLayout:
+            cols: 1
+            size_hint: 1,0.3
+            Button:
+                text: "Save"
+                bold: True 
+                font_size: "20dp"
+                background_color: 0,0,0   
+    GridLayout:
+        cols: 1
+        pos_hint: {"center_x": 0.04, "center_y": 0.97}
+        size_hint: 0.05, 0.05                
+        Button:
+            text: "back" 
+            on_press:
+                root.manager.transition = NoTransition()
+                root.manager.current = "Second"
+
+<Second>:
+    name: "Second"
+    GridLayout:
+        cols: 1
+        spacing: 20
+        GridLayout:
+            cols: 1
+            canvas:
+                Color:
+                    rgb: 200,200,0
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Label:
+                text: "OUR MENU"
+                bold: True
+                color: 0,0,0
+                font_size: 20
+
+        GridLayout:
+            cols: 4
+            Image:
+                source: "food1.png"
+                size_hint: 0.2, 0.1
+            Label:
+                text: "food description"  
+            Label:
+                text: "price: 15000fcfa"  
+            Button:
+                text: "Purchase"  
+                size_hint: 0.2, 0.2  
+                align: "left"  
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Purchase"    
+
+        GridLayout:  
+            cols: 4      
+            Image:
+                source: "food2.png"
+                size_hint: 0.2, 0.1
+            Label: 
+                text: "food description"
+            Label:
+                text: "price: 15000fcfa"  
+            Button:
+                text: "Purchase"  
+                size_hint: 0.2, 0.2  
+                align: "left"  
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Purchase"    
+ 
+    
+        GridLayout:    
+            cols: 4    
+            Image:
+                source: "food3.png"
+                size_hint: 0.2, 0.1
+            Label: 
+                text: "food description"
+            Label:
+                text: "price: 15000fcfa"  
+            Button:
+                text: "Purchase"  
+                size_hint: 0.2, 0.2  
+                align: "left"
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Purchase"    
+
+                
+        GridLayout:   
+            cols: 4     
+            Image:
+                source: "food1.png"
+                size_hint: 0.2, 0.1
+            Label: 
+                text: "food description"
+            Label:
+                text: "price: 15000fcfa"      
+            Button:
+                text: "Purchase"  
+                size_hint: 0.2, 0.2  
+                align: "left"
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Purchase"    
+
+        GridLayout: 
+            cols: 4        
+            Image:
+                source: "food2.png"
+                size_hint: 0.2, 0.1
+            Label: 
+                text: "food description"
+            Label:
+                text: "price: 15000fcfa"     
+            Button:
+                text: "Purchase"  
+                size_hint: 0.2, 0.2  
+                align: "left"  
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Purchase"    
+  
+   
+        GridLayout:
+            cols: 4      
+            Image:
+                source: "food3.png"
+                size_hint: 0.2, 0.1
+            Label: 
+                text: "food description"
+            Label:    
+                text: "price: 2000FCFA"   
+            Button:
+                text: "Purchase"  
+                size_hint: 0.2, 0.2  
+                align: "left"
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Purchase"    
+    
+        
+        GridLayout:
+            cols: 4       
+            Image:
+                source: "food3.png"
+                size_hint: 0.2, 0.1
+            Label: 
+                text: "food description"
+            Label:
+                text: "price: 15000fcfa"       
+            Button:
+                text: "Purchase"  
+                size_hint: 0.2, 0.2  
+                align: "left" 
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Purchase"    
+   
+
+        GridLayout:
+            cols: 4          
+            Image:
+                source: "food3.png"
+                size_hint: 0.2, 0.1
+            Label: 
+                text: "food description" 
+            Label:
+                text: "price: 15000fcfa"  
+            Button:
+                text: "Purchase"  
+                size_hint: 0.2, 0.2  
+                align: "left" 
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Purchase"    
+   
+
+        
+        GridLayout:
+            cols: 4         
+            Image:
+                source: "food3.png"
+                size_hint: 0.2, 0.1
+            Label: 
+                text: "food description" 
+            Label:
+                text: "price: 15000fcfa"  
+            Button:
+                text: "Purchase"  
+                size_hint: 0.2, 0.2  
+                align: "left"
+                on_press:
+                    root.manager.transition = NoTransition()
+                    root.manager.current = "Purchase"    
+    
+    GridLayout:
+        cols: 1
+        pos_hint: {"center_x": 0.03, "center_y": 0.97}
+        size_hint: 0.05, 0.05                
+        Button:
+            text: "back"
+            on_press:
+                root.manager.transition = NoTransition()
+                root.manager.current = "First"    
+
+
+                                 
+                
+
+                               
+
+
+    
+                                   
+
+
+                    
+               
+            
+                    
+
+

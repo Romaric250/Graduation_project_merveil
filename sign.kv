@@ -1,0 +1,55 @@
+<Sign>:
+    GridLayout:
+        cols: 1
+        spacing: "9dp"
+        size_hint: 0.5,0.4
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        GridLayout: 
+            cols: 1
+            Label: 
+                text: "Welcome to African Grill"
+                bold: True
+                font_size: 30
+                color: 1,1,0,1
+        GridLayout:
+            cols: 1
+            Label:
+                text: "Sign in"  
+                bold: True
+                font_size: 25
+                color: 0,0,0       
+        GridLayout:
+            cols: 2
+            spacing: "8dp"
+            size_hint: 0.3, 2.5
+            Label: 
+                text: "User name:"
+                bold: True
+                color: 0,0,0
+                font_size: 15
+            TextInput:
+                multiline: False
+            Label:
+                text: "PassWord:"
+                color: 0,0,0
+                bold: True
+                font_size: 15
+            TextInput:
+                multiline: False
+            Label:
+                text: "Enter your PassWord again"
+                bold: True
+                color: 0,0,0
+                font_size: 15
+            TextInput:
+                multiline: False 
+
+        GridLayout:
+            cols: 1
+            size_hint: 0.5,0.6
+            Button:
+                text: "Save"
+                
+               
+            
+        

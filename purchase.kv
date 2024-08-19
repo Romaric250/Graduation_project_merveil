@@ -1,0 +1,58 @@
+<Purchase>:
+    size_hint: 0.7,0.9
+    pos_hint: {"center_x": 0.5, "center_y": 0.5} 
+
+    GridLayout:
+        spacing: "9dp"
+        cols: 1
+        Image:
+            source: "food3.png"
+
+        GridLayout:
+            cols: 2
+            spacing: "8dp"
+            Label:
+                color: 0,0,0
+                text: "Name:"
+                bold: True
+                font_size: "15dp"
+            TextInput:
+                multiline: False
+
+            Label:
+                color: 0,0,0
+                text: "Contact:"
+                bold: True
+                font_size: "15dp"
+            TextInput:
+                multiline: False
+
+            Label:
+                color: 0,0,0
+                text: "Number of plates:"
+                bold: True
+                font_size: "15dp"
+            TextInput:
+                multiline: False   
+
+            Label:
+                color: 0,0,0
+                text: "Enter the delivery date:"
+                bold: True
+                font_size: "15dp"
+            TextInput:
+                multiline: False 
+
+        GridLayout:
+            cols: 1
+            size_hint: 1,0.3
+            Button:
+                text: "Save"
+                bold: True 
+                font_size: "20dp"
+                background_color: 0,0,0   
+                on_press: root.on_press_button()
+                
+                
+
+           

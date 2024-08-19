@@ -1,0 +1,92 @@
+<First>:
+
+    canvas: 
+        Ellipse:
+            size: 100,100
+            pos: 5, 495
+    BoxLayout:
+        canvas:
+            Ellipse:
+                pos: 200, 300
+                size: 100, 100
+                source: "food2.png"  
+    BoxLayout:               
+        canvas:
+            Ellipse:
+                pos: 300, 370
+                size: 100, 100
+                source: "food3.png"  
+    BoxLayout:                       
+        canvas:
+            Ellipse:
+                pos: 400, 300
+                size: 100, 100
+                source: "food1.png" 
+
+    GridLayout:
+        cols: 1
+        spacing: "10dp"
+        pos_hint: {"center_x": 0.6, "center_y": 0.9}
+        size_hint: 0.7, 0.1
+        Label:
+            text: "Welcome to African Grill"
+            bold: True
+            font_size: 30
+            
+        Label:    
+            text: "Met Camerounais - Grillades -Cocktail -Lounge " 
+            bold: True
+            font_size: 25
+          
+        Label    
+            text: "Mangez comme chez vous"
+            bold: True
+            font_size: 18
+
+
+    GridLayout: 
+        cols: 1
+        spacing: "2dp"
+        size_hint: 0.2, 0.2
+        pos_hint: {"center_x": 0.5, "center_y": 0.35}
+        Label:
+            text: "Bienvenue chez nous!!. Vous etes dans le bon endroit. Vous satisfaire c'est notre Priorite.Nous"
+            font_size: 18
+        Label:
+            text: " sommes l'un des meilleur restaurant au Cameroun qui font dans la specialite "
+            font_size: 18
+        Label:
+            text: "des mets cameroonais. Nesite pas a explorer nos menu car vous serez vivement ravi"  
+            font_size: 18    
+
+    GridLayout:
+        cols: 1
+        spacing: "2dp"
+        pos_hint: {"center_x": 0.8, "center_y": 0.1} 
+        size_hint: 0.3, 0.1
+        Button:
+            text: "signIn"
+            size_hint: 0.2, 0.1
+            color: 1, 1, 0
+            bold: True
+        Button: 
+            text: "LogIn"
+            size_hint: 0.2, 0.1   
+            color: 1, 1, 0
+            bold: True
+            
+    GridLayout:
+        cols: 1
+        spacing: "2dp"
+        pos_hint: {"center_x": 0.15, "center_y": 0.1}
+        size_hint: 0.2, 0.13
+        Label:
+            text: "Founded by Mme Emmy"
+            color: 1, 1, 0
+        Label:
+            text: "Location: sis fue Nlongkak" 
+            color: 1, 1, 0
+        Label:
+            text: "Contact: 691 07 08 22" 
+            color: 1, 1, 0                          
+          
