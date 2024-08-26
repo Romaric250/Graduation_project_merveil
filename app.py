@@ -1,6 +1,9 @@
 from kivy.app import App
 from kivy.uix.screenmanager import *
 
+class Log(Screen):
+    pass
+
 class First(Screen):
     pass
 

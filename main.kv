@@ -1,18 +1,28 @@
 #: import NoTransition kivy.uix.screenmanager.NoTransition
 <WindowManager>:
+    Log:
     First:
     Sign:
     Third:
     Second:
     Purchase:
 
-                     
+<Log>:
+    GridLayout:
+        cols: 1
+        BoxLayout:
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            size_hint: 0.5, 0.7
+            Image:
+                source: "newlogo.png"
+
 <First>:
     name: "First"
     canvas: 
         Ellipse:
             size: 100,100
             pos: 5, 495
+            source: "logo.png"
     BoxLayout:
         canvas:
             Ellipse:
