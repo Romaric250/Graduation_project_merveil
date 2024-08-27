@@ -2,57 +2,112 @@
     GridLayout:
         cols: 1
         spacing: "8dp"
+        padding: "10dp"
+        canvas.before:
+            Color:
+                rgba: 1, 0.9, 0.6, 1  # Light yellow background
+            Rectangle:
+                pos: self.pos
+                size: self.size
 
         GridLayout:
             cols: 1
+            size_hint_y: None
+            height: self.minimum_height
             Label: 
                 text: "Customers commands"
                 bold: True
-                color: 1, 1, 0
-          
-        GridLayout:
-            cols: 5
-            Label:
-                text: "customer details"
-            Label:
-                text: "name:"
-            Label: 
-                text: "contact"
-            Label:
-                text: "food name:"
-            Label:
-                text: "number of plates"
-            Label:
-                text: "delivery date"            
-
+                color: 1, 0.5, 0  # Orange text
+                font_size: '20sp'
+                size_hint_y: None
+                height: self.texture_size[1] + 10
 
         GridLayout:
             cols: 5
+            spacing: "5dp"
+            padding: "5dp"
+            canvas.before:
+                Color:
+                    rgba: 1, 0.8, 0.4, 1  # Light orange background
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
             Label:
-                text: "customer details"
+                text: "Customer details"
+                color: 1, 0.5, 0  # Orange text
+                bold: True
             Label:
-                text: "name:"
+                text: "Name:"
+                color: 1, 0.5, 0  # Orange text
             Label: 
-                text: "contact"
+                text: "Contact"
+                color: 1, 0.5, 0  # Orange text
             Label:
-                text: "food name:"
+                text: "Food name:"
+                color: 1, 0.5, 0  # Orange text
             Label:
-                text: "number of plates"
+                text: "Number of plates"
+                color: 1, 0.5, 0  # Orange text
             Label:
-                text: "delivery date"   
-
+                text: "Delivery date"
+                color: 1, 0.5, 0  # Orange text
 
         GridLayout:
             cols: 5
+            spacing: "5dp"
+            padding: "5dp"
+            canvas.before:
+                Color:
+                    rgba: 1, 0.8, 0.4, 1  # Light orange background
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
             Label:
-                text: "customer details"
+                text: "Customer details"
+                color: 1, 0.5, 0  # Orange text
+                bold: True
             Label:
-                text: "name:"
+                text: "Name:"
+                color: 1, 0.5, 0  # Orange text
             Label: 
-                text: "contact"
+                text: "Contact"
+                color: 1, 0.5, 0  # Orange text
             Label:
-                text: "food name:"
+                text: "Food name:"
+                color: 1, 0.5, 0  # Orange text
             Label:
-                text: "number of plates"
+                text: "Number of plates"
+                color: 1, 0.5, 0  # Orange text
             Label:
-                text: "delivery date"                                         
+                text: "Delivery date"
+                color: 1, 0.5, 0  # Orange text
+
+        GridLayout:
+            cols: 5
+            spacing: "5dp"
+            padding: "5dp"
+            canvas.before:
+                Color:
+                    rgba: 1, 0.8, 0.4, 1  # Light orange background
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Label:
+                text: "Customer details"
+                color: 1, 0.5, 0  # Orange text
+                bold: True
+            Label:
+                text: "Name:"
+                color: 1, 0.5, 0  # Orange text
+            Label: 
+                text: "Contact"
+                color: 1, 0.5, 0  # Orange text
+            Label:
+                text: "Food name:"
+                color: 1, 0.5, 0  # Orange text
+            Label:
+                text: "Number of plates"
+                color: 1, 0.5, 0  # Orange text
+            Label:
+                text: "Delivery date"
+                color: 1, 0.5, 0  # Orange text
